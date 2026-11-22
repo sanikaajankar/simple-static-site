@@ -3,42 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A clean, responsive static portfolio and project showcase site.">
-    <title>Sanika Ajankar | Static Portfolio Site</title>
+    <meta name="description" content="Responsive static portfolio and project showcase built with semantic HTML5 and modern CSS3.">
+    <title>Sanika Ajankar | Web Developer Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav class="navbar" aria-label="Main Navigation">
+        <div class="container nav-content">
+            <a href="#" class="brand">Sanika Ajankar</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <header class="site-header">
         <div class="container">
             <h1>Sanika Ajankar</h1>
             <p class="subtitle">Full-Stack Web Developer &amp; Software Builder</p>
+            <a href="#projects" class="btn-primary">View My Work</a>
         </div>
     </header>
 
     <main class="container">
-        <section class="card" aria-labelledby="about-heading">
-            <h2 id="about-heading">About This Site</h2>
+        <section id="about" class="card" aria-labelledby="about-heading">
+            <h2 id="about-heading">About Me</h2>
             <p>
-                Welcome to my static web project built with semantic HTML5 and modern CSS3.
-                This page demonstrates clean layout structure, responsive design, and GitHub version control.
+                Welcome to my responsive static website built with semantic HTML5 and modern CSS3.
+                I focus on writing clean, accessible, and well-structured code backed by Git version control.
             </p>
         </section>
 
-        <section class="card" aria-labelledby="skills-heading">
+        <section id="skills" class="card" aria-labelledby="skills-heading">
             <h2 id="skills-heading">Core Technologies</h2>
             <ul class="tag-list">
                 <li>HTML5</li>
-                <li>CSS3</li>
-                <li>JavaScript</li>
+                <li>CSS3 &amp; Flexbox/Grid</li>
+                <li>JavaScript (ES6+)</li>
                 <li>Python &amp; Flask</li>
                 <li>Git &amp; GitHub</li>
             </ul>
+        </section>
+
+        <section id="projects" class="card" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Featured Projects</h2>
+            <div class="project-grid">
+                <article class="project-item">
+                    <h3>Interactive To-Do List</h3>
+                    <p>A responsive task manager built with Bootstrap 5 and browser localStorage.</p>
+                </article>
+                <article class="project-item">
+                    <h3>Dynamic Task Board</h3>
+                    <p>Full-stack Flask and SQLite application with real-time Fetch API updates.</p>
+                </article>
+            </div>
         </section>
     </main>
 
     <footer class="site-footer">
         <div class="container">
-            <p>&copy; 2026 Sanika Ajankar. Hosted on GitHub.</p>
+            <p>&copy; 2026 Sanika Ajankar. Built with HTML5 &amp; CSS3.</p>
         </div>
     </footer>
 </body>
