@@ -1,85 +1,20 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+# Simple Static Site
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #222;
-    background-color: #f4f7fb;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+A responsive personal portfolio and project showcase built with semantic HTML5 and modern CSS3, deployed via GitHub Pages.
 
-.container {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+## Live Demo
+View the live site at: `https://github.io`
 
-.site-header {
-    background: linear-gradient(135deg, #2563eb, #1d4ed8);
-    color: #ffffff;
-    padding: 48px 0;
-    text-align: center;
-    margin-bottom: 32px;
-}
+## Features
+- **Semantic HTML5**: Uses `<nav>`, `<header>`, `<main>`, `<section>`, `<article>`, and `<footer>` with ARIA accessibility labels.
+- **Modern CSS3**: Built with CSS custom properties (`:root`), Flexbox, CSS Grid, smooth scrolling, and mobile `@media` breakpoints.
+- **Clean Repository Structure**: Organized with `index.html`, `style.css`, and `README.md`.
 
-.site-header h1 {
-    font-size: 2.25rem;
-    margin-bottom: 8px;
-}
+## Project Structure
+- `index.html` — Main HTML5 page structure and navigation
+- `style.css` — Custom CSS variables, responsive grid/flexbox layouts, and hover transitions
+- `README.md` — Project documentation and setup instructions
 
-.subtitle {
-    font-size: 1.1rem;
-    opacity: 0.9;
-}
-
-main {
-    flex: 1;
-}
-
-.card {
-    background: #ffffff;
-    border-radius: 10px;
-    padding: 24px 28px;
-    margin-bottom: 24px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-}
-
-.card h2 {
-    color: #1e3a8a;
-    margin-bottom: 12px;
-    font-size: 1.4rem;
-}
-
-.tag-list {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 12px;
-}
-
-.tag-list li {
-    background-color: #eff6ff;
-    color: #1d4ed8;
-    border: 1px solid #bfdbfe;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-weight: 600;
-    font-size: 0.9rem;
-}
-
-.site-footer {
-    text-align: center;
-    padding: 20px 0;
-    color: #555;
-    font-size: 0.9rem;
-    border-top: 1px solid #e2e8f0;
-    margin-top: 24px;
-}
+## How to Run Locally
+1. Clone the repository: `git clone https://github.com`
+2. Open `index.html` in any web browser.
