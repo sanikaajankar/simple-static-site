@@ -1,20 +1,203 @@
-# Simple Static Site
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --text-main: #1f2937;
+    --text-muted: #4b5563;
+    --bg-page: #f3f4f6;
+    --bg-card: #ffffff;
+    --border-light: #e5e7eb;
+    --radius: 10px;
+}
 
-A responsive personal portfolio and project showcase built with semantic HTML5 and modern CSS3, deployed via GitHub Pages.
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-## Live Demo
-View the live site at: `https://github.io`
+html {
+    scroll-behavior: smooth;
+}
 
-## Features
-- **Semantic HTML5**: Uses `<nav>`, `<header>`, `<main>`, `<section>`, `<article>`, and `<footer>` with ARIA accessibility labels.
-- **Modern CSS3**: Built with CSS custom properties (`:root`), Flexbox, CSS Grid, smooth scrolling, and mobile `@media` breakpoints.
-- **Clean Repository Structure**: Organized with `index.html`, `style.css`, and `README.md`.
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-main);
+    background-color: var(--bg-page);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
-## Project Structure
-- `index.html` — Main HTML5 page structure and navigation
-- `style.css` — Custom CSS variables, responsive grid/flexbox layouts, and hover transitions
-- `README.md` — Project documentation and setup instructions
+.container {
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-## How to Run Locally
-1. Clone the repository: `git clone https://github.com`
-2. Open `index.html` in any web browser.
+/* Navigation Bar */
+.navbar {
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--border-light);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.brand {
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+    color: var(--primary);
+}
+
+/* Hero Header */
+.site-header {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: #ffffff;
+    padding: 56px 0;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.site-header h1 {
+    font-size: 2.4rem;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.92;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #ffffff;
+    color: var(--primary-dark);
+    padding: 10px 22px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Main Content & Cards */
+main {
+    flex: 1;
+}
+
+.card {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 28px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+    color: var(--primary-dark);
+    margin-bottom: 14px;
+    font-size: 1.4rem;
+}
+
+.tag-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag-list li {
+    background-color: #eff6ff;
+    color: var(--primary-dark);
+    border: 1px solid #bfdbfe;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Responsive Project Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+}
+
+.project-item {
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    padding: 18px;
+    background-color: #f9fafb;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-2px);
+    border-color: var(--primary);
+}
+
+.project-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+    color: var(--text-main);
+}
+
+.project-item p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* Footer */
+.site-footer {
+    text-align: center;
+    padding: 20px 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border-light);
+    margin-top: 24px;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 600px) {
+    .site-header h1 {
+        font-size: 1.85rem;
+    }
+
+    .nav-links {
+        gap: 14px;
+        font-size: 0.95rem;
+    }
+}
